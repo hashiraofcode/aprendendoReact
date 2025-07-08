@@ -11,35 +11,48 @@ footer .logo-socialMedia-container {
     gap: 3rem;
 }
 
+footer .logo-socialMedia-container img {
+    max-width: 50px;
+    max-height: 30px;
+}
+
 footer .logo-socialMedia-container p {
     font-size: clamp(1rem, 5%, 1.4);
     width: 60%;
 }
+
 footer .logo-socialMedia-container img {
     max-width: 100px;
     max-height: 41px;
 }
+
 /* links da página no footer */
 .links-list {
     gap: 4rem;
 }
+
 .links-container {
     gap: 3rem;
 }
+
 .links-container li {
-   text-align: center;
-   text-transform: capitalize;
-   font-size: clamp(1.2rem, 3vw, 2.2rem);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
 }
+
 .links-container li span {
     text-transform: lowercase;
 }
+
 .social-media {
     gap: 3rem;
 }
+
 footer address {
     gap: 4.6rem;
 }
+
 footer address p {
     font-size: clamp(1.2rem, 3vw, 2.2rem);
 }
@@ -47,12 +60,14 @@ footer address p {
 .adress-container {
     gap: 3rem;
 }
+
 /*  container do copyright e linguagens */
 .footer-languages-credits {
     width: 100%;
     margin-top: 20rem;
     padding: 2rem;
 }
+
 .coutry-flag {
     display: flex;
     gap: 3rem;
@@ -65,33 +80,50 @@ footer address p {
 }
 
 @media (max-width: 1024px) {
-footer {
-    padding: 0 3rem;
-    flex-direction: column;
+    footer {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+
+    footer .logo-socialMedia-container,
+    .links-container,
+    .adress-container {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .links-container {
+        margin: 2rem 0 0 0;
+    }
+
+    .links-container li {
+        text-align: start;
+    }
+
+    .links-container h5 {
+        margin: 0 auto 0 0;
+    }
+
+    .adress-container {
+        margin: 2rem 0;
+    }
+
+    .footer-languages-credits {
+        padding-bottom: 2rem;
+    }
+
+    .coutry-flag {
+        min-width: 10rem;
+    }
+
+    footer .logo-socialMedia-container p {
+        width: 100%;
+    }
 }
-footer .logo-socialMedia-container, .links-container, .adress-container {
-    min-width: 100%;
-    max-width: 100%;
-}
-.links-container {
-    margin: 2rem 0 0 0;
-}
-.links-container li {
-   text-align: start;
-}
-.links-container h5 {
-    margin: 0 auto 0 0;
-}
-.adress-container {
-    margin: 2rem 0;
-}
-.footer-languages-credits {
-    padding-bottom: 2rem;
-}
-.coutry-flag {
-    min-width: 10rem;
-}
-footer .logo-socialMedia-container p {
-    width: 100%;
-}
+
+@media (max-width: 425px) {
+   footer .logo-socialMedia-container img {
+      max-width: 50px;
+      max-height: 30px;
+   }
 }

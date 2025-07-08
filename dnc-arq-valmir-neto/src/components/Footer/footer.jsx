@@ -21,7 +21,7 @@ function Footer() {
                         <img src={facebookLogo} alt="logo do facebook" aria-label='button social media' /><img src={twiterLogo} alt="logo do twiter" aria-label='button social media' /><img src={linkeldnLogo} alt="logo do linkeldn" aria-label='button social media' /><img src={instagramLogo} alt="logo do instagram" aria-label='button social media' />
                     </div>
                 </div>
-                <div className='links-container flex-children flex-container flex-direction jc-center'>
+                <div className='links-container flex-children flex-container flex-direction jc-center flex-wrap'>
                     <h5 className='align-center trasform-text small-titles'>pages</h5>
                     <ul className='links-list flex-container flex-direction jc-center'>
                         <li><Link to='/'>home</Link></li>
@@ -41,7 +41,7 @@ function Footer() {
                     </address>
                 </div>
                 </div>
-                <div className="footer-languages-credits flex-container jc-space-between">
+                <div className="footer-languages-credits flex-container jc-space-between flex-wrap">
                     <p>Copyright  &copy; DNC - 2024 </p>
                     <div className="coutry-flag">
                         <img src={brazilianFlag} alt="brazilian" aria-label='Select your language "Portugues Brazilian"' />

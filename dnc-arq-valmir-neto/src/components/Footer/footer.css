@@ -1,0 +1,48 @@
+footer {
+    width: 100%;
+    min-height: 300px;
+    padding: 0 clamp(2rem, 50%, 15rem);
+    gap: 3rem;
+}
+/* Parte de informações da escola */
+footer .logo-socialMedia-container {
+    min-width: 600px;
+    gap: 3rem;
+}
+
+footer .logo-socialMedia-container p {
+    font-size: clamp(1rem, 5%, 1.4);
+    width: 60%;
+}
+footer .logo-socialMedia-container img {
+    max-width: 100px;
+    max-height: 41px;
+}
+/* links da página no footer */
+.links-list {
+    gap: 4rem;
+}
+.links-container {
+    gap: 3rem;
+}
+.links-container li {
+   text-align: center;
+   text-transform: capitalize;
+   font-size: clamp(1.2rem, 3vw, 2.2rem);
+}
+.links-container li span {
+    text-transform: lowercase;
+}
+.social-media {
+    gap: 3rem;
+}
+footer address {
+    gap: 2rem;
+}
+footer address p {
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+.adress-container {
+    gap: 3rem;
+}

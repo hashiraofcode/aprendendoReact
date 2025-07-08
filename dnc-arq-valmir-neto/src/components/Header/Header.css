@@ -1,0 +1,21 @@
+header {
+    background-color: white;
+    padding: clamp(1rem, 10%, 4rem) clamp(4rem, 50%, 15rem);
+}
+
+nav ul {
+
+    gap: clamp(1rem, 10%, 4rem);
+}
+/* image replaciment */
+header a h1 span {
+    text-indent: -1000px;
+    font-size: .5rem;
+}
+
+ nav> ul li {
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+nav> ul li a:hover {
+    color: #0C70F2;
+}

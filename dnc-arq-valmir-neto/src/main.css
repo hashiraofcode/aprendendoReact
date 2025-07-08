@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  width: 100%;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: #1D1D1D;
+  background-color: white;
+  border: none; 
+  vertical-align: baseline;
+}
+a {
+  text-decoration: none;
+  color: var(--secundary-color);
+}
+ol,ul {
+  list-style: none;
+}
+
+/* colors scheme */
+:root {
+  --primary-color:#0C70F2;
+  --secundary-color: #1D1D1D;
+  --tertiary-color: #F6F6F6;
+}
+
+.primary-background {
+  background-color: var(--primary-color);
+}
+
+.secundary-background {
+  background-color: var(--secundary-color) ;
+}
+
+.tertiary-background {
+  background-color: var(--tertiary-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secundary {
+  color: var(--secundary-color);
+}
+
+.text-tertiary {
+  color: var(--tertiary-color);
+}
+/* typography */
+.font-title-oversize {
+  font-size: clamp(4.5rem, 12vw, 6.5rem);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+.font-other-titles {
+  font-size: clamp(1.4rem, 3vw, 5rem);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+.font-text {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-family: "DM Serif Display", serif;
+}
+
+.small-titles {
+  font-size: clamp(1.6rem, 3vw, 1.9rem);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+.wrap-text {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.trasform-text {
+  text-transform: capitalize;
+}
+/* layout class */
+.align-center {
+  margin: 0 auto;
+}
+
+.align-start {
+  margin: 0 auto 0 0;
+}
+
+.align-end {
+  margin: 0 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 2%, 3rem);
+  position: relative;
+}
+
+/* flex container configs */
+
+.flex-container {
+  display: flex;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.jc-space-evenly {
+  justify-content: space-evenly;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-children {
+  flex: 1;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.max-width-30rem {
+  max-width: 30rem;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 0;
+  }
+  .mobile-fd-colum {
+    flex-direction: column;
+  }
+}

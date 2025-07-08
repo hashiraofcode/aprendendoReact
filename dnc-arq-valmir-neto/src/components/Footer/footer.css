@@ -37,7 +37,7 @@ footer .logo-socialMedia-container img {
     gap: 3rem;
 }
 footer address {
-    gap: 2rem;
+    gap: 3rem;
 }
 footer address p {
     font-size: clamp(1.2rem, 3vw, 2.2rem);
@@ -45,4 +45,16 @@ footer address p {
 
 .adress-container {
     gap: 3rem;
+}
+/*  container do copyright e linguagens */
+.footer-languages-credits {
+    width: 100%;
+}
+.coutry-flag {
+    display: flex;
+    gap: 3rem;
+}
+
+.coutry-flag img {
+ cursor: pointer;
 }

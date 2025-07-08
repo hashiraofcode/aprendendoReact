@@ -91,4 +91,7 @@ footer .logo-socialMedia-container, .links-container, .adress-container {
 .coutry-flag {
     min-width: 10rem;
 }
+footer .logo-socialMedia-container p {
+    width: 100%;
+}
 }

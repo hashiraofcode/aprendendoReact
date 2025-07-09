@@ -12,6 +12,7 @@
 .button.primary {
     background-color: #0c70f2;
     color:white;
+    border: none;
 }
 
 .button.primary:hover {
@@ -22,6 +23,7 @@
 .button.secundary {
     background-color: #1d1d1d;
     color: white;
+    border: none;
 }
 
 .button.secundary:hover {
@@ -35,7 +37,7 @@
     border: 2px solid #0c70f2;
 }
 
-.button.outline {
+.button.outline:hover {
     background-color: #0c70f2;
     color: white;
 }

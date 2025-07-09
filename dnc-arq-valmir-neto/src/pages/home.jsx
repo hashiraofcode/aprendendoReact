@@ -6,7 +6,7 @@ function Home() {
     return(
         <>
         <Header />
-        <BannerComponet image={bannerImageBg} title="About Us"/>
+        <Hero />
         <h1>Home</h1>
         <Footer />
         </>

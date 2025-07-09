@@ -1,12 +1,12 @@
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/footer'
 import Buttons from '../components/buttonsAplication/button'
-import Banner from '../assets/banner/banner'
+import Hero from '../components/Hero/hero'
 function Home() {
     return(
         <>
         <Header />
-        <Banner/>
+        <BannerComponet image={bannerImageBg} title="About Us"/>
         <h1>Home</h1>
         <Footer />
         </>

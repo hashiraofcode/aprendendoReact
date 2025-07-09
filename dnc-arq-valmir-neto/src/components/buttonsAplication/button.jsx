@@ -1,4 +1,4 @@
-import { Children } from "react"
+import "../buttonsAplication/button.css"
 
 
 function Buttons(StyleButton, arrow, loading, children, ...props) {

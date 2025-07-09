@@ -1,6 +1,6 @@
 header {
     background-color: white;
-    padding: clamp(1rem, 10%, 4rem) clamp(4rem, 50%, 15rem);
+    padding: clamp(1rem, 10%, 4rem) 0 /*clamp(4rem, 50%, 15rem)*/;
 }
 
 nav ul {

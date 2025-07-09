@@ -12,7 +12,8 @@ import UsaFlag from '../../assets/coutry-USA-Flag.svg'
 function Footer() {
     return (
         <>
-            <footer className='flex-container flex-align-center flex-wrap'>
+        <div className="container">
+          <footer className='flex-container flex-align-center flex-wrap'>
                 <div className="content-footer flex-container flex-align-center flex-wrap">
                          <div className='logo-socialMedia-container flex-container flex-direction flex-children max-width-30rem '>
                     <img src={dncLogo} alt="Logo Dnc" />
@@ -50,6 +51,7 @@ function Footer() {
                 </div>
 
             </footer>
+        </div>
         </>
     )
 }

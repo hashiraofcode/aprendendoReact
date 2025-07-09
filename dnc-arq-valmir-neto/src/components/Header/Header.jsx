@@ -4,7 +4,8 @@ import '../Header/Header.css'
 function Header() {
     return (
         <>
-            <header className='flex-container jc-space-between'>
+        <div className="container">
+              <header className='flex-container jc-space-between'>
                 <Link to='/' aria-label='back to home'>
                     <h1 className='flex-container flex-direction'>
                         <img src={logo} alt="logo-dnc" />
@@ -29,6 +30,7 @@ function Header() {
                     </ul>
                 </nav>
             </header>
+        </div>
         </>
     )
 }

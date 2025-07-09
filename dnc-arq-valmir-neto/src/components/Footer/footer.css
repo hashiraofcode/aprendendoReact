@@ -1,7 +1,7 @@
 footer {
     width: 100%;
     min-height: 300px;
-    padding: 0 clamp(2rem, 50%, 15rem);
+    /* padding: 0 clamp(2rem, 50%, 15rem); */
     gap: 3rem;
 }
 
@@ -69,6 +69,7 @@ footer address p {
 }
 
 .coutry-flag {
+    width: 100px;
     display: flex;
     gap: 3rem;
 }

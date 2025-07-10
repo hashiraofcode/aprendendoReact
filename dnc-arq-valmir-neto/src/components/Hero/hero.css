@@ -1,0 +1,17 @@
+.hero {
+    width: auto;
+    min-height: 70.38rem;
+    border-radius: 1.8rem;
+    background-position: center;
+    background-size: cover;
+    padding-left: 3.8vw;
+}
+.heroContent {
+    gap: 2rem
+}
+.heroContent p {
+    font-family: "Jost", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #4D5053
+}

@@ -1,0 +1,1 @@
+Todos os arquivos deixados nesta pasta tem o objetivo de uma possível escalação no código que não fazem parte do projeto original do código e são de minha autoria.

@@ -9,7 +9,7 @@ function Home() {
         <>
         <Header />
         <Hero />
-        <ProjectList />
+        <ProjectList/>
         <h1>Home</h1>
         <Footer />
         </>

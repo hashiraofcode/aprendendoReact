@@ -1,0 +1,40 @@
+
+.section-projects {
+    padding-top: 20dvh;
+    display: flex;
+    justify-content: center;
+    row-gap: 2rem;
+    flex-direction: column;
+}
+
+.section-projects p,
+.section-projects h2 {
+    text-align: center;
+}
+
+.project-grid {
+    gap: 1rem;
+    row-gap: 5rem;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+/* cards */
+.card {
+    row-gap: 1rem;
+    text-align: center;
+}
+
+.exemple-poster {
+    background-color: #8b8b8b;
+    min-height: 35rem;
+    min-width: 20rem;
+    border-radius: 1.8rem;
+}
+
+.card button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+

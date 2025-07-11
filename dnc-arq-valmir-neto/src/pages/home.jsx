@@ -10,7 +10,6 @@ function Home() {
         <Header />
         <Hero />
         <ProjectList/>
-        <h1>Home</h1>
         <Footer />
         </>
     )

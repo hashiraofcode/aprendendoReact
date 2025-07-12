@@ -10,7 +10,7 @@ function Contacts() {
         <Header/>
         <Banner image={ImageBanner} title='Contact'/>
         <h1>contato</h1>
-        {/* <ContactForm/> */}
+        <ContactForm/>
         <Footer />
         </>
     )

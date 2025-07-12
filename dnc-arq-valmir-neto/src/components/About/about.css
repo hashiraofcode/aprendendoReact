@@ -1,0 +1,25 @@
+.container.aboutContent {
+    margin: 20rem auto;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.content-wrapper {
+    row-gap: 2rem;
+}
+
+
+
+@media  (min-width: 1024px){
+       .container.aboutContent {
+        column-gap: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .container.aboutContent {
+        flex-wrap: wrap;
+    }
+    .title-about-content {
+    text-align: center;
+}
+}

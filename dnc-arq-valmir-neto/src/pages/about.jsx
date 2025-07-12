@@ -2,11 +2,15 @@ import BannerComponet from '../components/banner/banner'
 import bannerImageBg from '../assets/bg-about-image.svg'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/footer'
+import AboutContent from '../components/About/about'
 
 function About() {
-    return(
+    return (
         <>
-        
+            <Header />
+            <BannerComponet image={bannerImageBg} title='About' />
+            <AboutContent/>
+            <Footer />
         </>
     )
 }

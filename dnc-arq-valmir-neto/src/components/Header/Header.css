@@ -43,6 +43,9 @@ nav> ul li a:hover {
 @media (max-width: 768px) {
     nav.open.flex-container.flex-align-center.flex-grow {
         display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
     }
 
     nav.flex-container.flex-align-center.flex-grow {
@@ -68,6 +71,7 @@ nav> ul li a:hover {
     }
     nav ul li {
         width: 100%;
+        padding: 0 30px;
     }
     nav ul li a {
         border-bottom: 1px solid white;
@@ -75,18 +79,13 @@ nav> ul li a:hover {
         text-decoration: none;
         font-size: clamp(15px, 3vw, 20px);
         margin-bottom: 1rem;
-        padding: 12px;
         width: 100%;
         display: flex;
         justify-content: flex-start;
+        margin-bottom: .2rem;
+        padding-bottom: .5rem;
     }
     .menu-mobile-button {
         display: block;
-    }
-    .close-button {
-        background: none;
-        color: white;
-        border: none;
-        font-size: clamp(1.9rem, 4vw, 2.5rem);
     }
 }

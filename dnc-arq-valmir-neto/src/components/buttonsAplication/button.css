@@ -9,10 +9,11 @@
     transition: background-color 0.3s ease;
     max-width: 220px;
 }
+
 /* PRIMARY */
 .button.primary {
     background-color: #0c70f2;
-    color:white;
+    color: white;
     border: none;
 }
 
@@ -49,11 +50,15 @@
     background: none;
     width: fit-content;
     padding: 1rem;
+    color: white;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    font-weight: 400;
 }
 
 /* DISABLE */
 
-.button:disabled, .button:disabled>:hover {
+.button:disabled,
+.button:disabled>:hover {
     background-color: #ccc;
     color: #666;
     pointer-events: none;

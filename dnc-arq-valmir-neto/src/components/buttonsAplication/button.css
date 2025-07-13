@@ -50,3 +50,11 @@
     color: #666;
     pointer-events: none;
 }
+
+@media (max-width: 425px) {
+    .button {
+        padding: 2rem 3.5rem;
+        font-size: 1rem;
+    }
+
+}

@@ -43,6 +43,14 @@
     color: white;
 }
 
+/* UNSTYLE */
+.unstyle {
+    border: none;
+    background: none;
+    width: fit-content;
+    padding: 1rem;
+}
+
 /* DISABLE */
 
 .button:disabled, .button:disabled>:hover {

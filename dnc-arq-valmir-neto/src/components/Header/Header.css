@@ -17,10 +17,9 @@ header a {
     align-items: center;
     justify-content: center;
 }
-/* header h1 img {
-    min-width: 100px;
-    min-height: 40px;
-} */
+.menu-mobile-button {
+    display: none;
+}
 
  nav> ul li {
     font-size: clamp(1rem, 3vw, 2rem);
@@ -81,7 +80,7 @@ nav> ul li a:hover {
         display: flex;
         justify-content: flex-start;
     }
-    .mobile-menu {
+    .menu-mobile-button {
         display: block;
     }
     .close-button {

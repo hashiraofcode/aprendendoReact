@@ -15,7 +15,9 @@ function Header() {
                         <span className='image-replaciment' tabIndex='1'>DNC</span>
                     </h1>
                 </Link>
-                <ButtonMenu StyleButton={"secundary"} onClick={()=> setOpen(!isOpen)}>Menu</ButtonMenu>
+                <div className="menu-mobile-button">
+                     <ButtonMenu StyleButton={"secundary"} onClick={()=> setOpen(!isOpen)}>Menu</ButtonMenu>
+                </div>
                 <nav className={`flex-container flex-align-center flex-grow ${isOpen? 'open' : '' }`}>
                     <ul className='flex-container flex-grow jc-end'>
                         <li>

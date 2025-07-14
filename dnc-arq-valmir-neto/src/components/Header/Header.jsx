@@ -19,7 +19,7 @@ function Header() {
                      <ButtonMenu StyleButton={"secundary"} onClick={()=> setOpen(!isOpen)}>Menu</ButtonMenu>
                 </div>
                 <nav className={`flex-container flex-align-center flex-grow ${isOpen? 'open' : '' }`}>
-                    <div className="menu-mobile-button close-button">
+                    <div className="menu-mobile-button">
                         <ButtonMenu StyleButton={'unstyle'} onClick={()=> setOpen(!isOpen)} >X</ButtonMenu>
                     </div>
                     <ul className='flex-container flex-grow jc-end'>

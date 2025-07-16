@@ -1,7 +1,7 @@
- export const apiService = async (endingpoint, parms) => {
+const apiService = async (endingpoint, params) => {
     try {
-        const URL = new URL (`https://react.dnc.group/files/${endingpoint}`);
-         const response = await fetch(URL);
+        const url = endingpoint;
+         const response = await fetch(url);
         if(!response.ok) {
             throw new Error(`houve um erro  ${response.status}: ${response.statusText}`);
         }
@@ -9,6 +9,9 @@
         return data
     } catch (err) {
         console.error(err);
+        return [];  
     }
  }
+
+ export default apiService
   

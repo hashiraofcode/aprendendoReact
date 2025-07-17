@@ -4,4 +4,21 @@ h2.contact-title {
 
 .container.contact-container  {
     margin: 20rem auto;
+    row-gap: 2rem;
+    
+}
+
+.container.contact-container form {
+    row-gap: 1rem;
+}
+
+.form-group-container:not(:first-child) {
+    margin-top: 3rem;
+}
+
+
+
+.form-group-container:first-child {
+    gap: 2rem;
+    flex-wrap: wrap;
 }

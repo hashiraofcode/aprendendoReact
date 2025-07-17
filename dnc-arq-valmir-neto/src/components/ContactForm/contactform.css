@@ -29,3 +29,7 @@ h2.contact-title {
     outline: none;
     resize: none;
 }
+
+.message-wrapper {
+    column-gap: 2rem;
+}

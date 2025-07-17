@@ -16,9 +16,16 @@ h2.contact-title {
     margin-top: 3rem;
 }
 
-
-
 .form-group-container:first-child {
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+.form-group-textArea {
+    width: 100%;
+    max-width: 615px;
+    border: none;
+    border-bottom: 1px solid #2d2d2d;
+    outline: none;
+    resize: none;
 }

@@ -87,7 +87,7 @@ function ContactForm() {
                         placeholder='E-mail *'
                         className='font-text text-secundary form-group-input'
                         onChange={handleChange}
-                         value={formData.name}
+                         value={formData.email}
                     />
                 </div>
                 <div className='flex-container form-group-container jc-center'>
@@ -98,7 +98,7 @@ function ContactForm() {
                         className='form-group-textArea font-text text-secundary'
                         placeholder='escreva...'
                         onChange={handleChange}
-                        value={formData.name}
+                        value={formData.message}
                     ></textarea>
                 </div>
                 <div className='flex-container form-group-container jc-end message-wrapper flex-align-center'>

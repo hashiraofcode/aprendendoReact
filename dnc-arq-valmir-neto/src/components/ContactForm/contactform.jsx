@@ -26,6 +26,10 @@ function ContactForm() {
 
             if (response.ok) {
                 setSubmittedSuccess(true);
+                // função que elimina a menssagem da tela.
+                setTimeout(()=> {
+                      setSubmittedSuccess(false);
+                }, 3000)
             }
         } catch (e) {
             console.log('Erro: ', e);

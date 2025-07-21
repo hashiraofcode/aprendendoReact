@@ -15,3 +15,9 @@
     font-weight: 400;
     color: #4D5053
 }
+
+@media (min-width:1024px) {
+    h2.text-secundary.font-title-oversize {
+    max-width: 60%;
+}
+}

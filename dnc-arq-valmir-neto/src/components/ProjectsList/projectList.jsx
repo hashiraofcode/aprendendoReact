@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import '../ProjectsList/projectList.css'
 // assets
 import likeFill from '../../assets/like-filled.svg'
@@ -7,7 +7,17 @@ import like from '../../assets/like.svg'
 // services
 import  apiService  from '../../services/apiService'
 
+// UTILITS
+import { callBackDefaultContent } from '../../utilits/callBackDefaultContent'
+
+// CONTEXT
+import { AppContext } from '../../context/textsContext'
+
 function ProjectList() {
+
+    const dataContext = useContext(AppContext);
+    const contentApplication = dataContext?.contentApplication; 
+    const language = dataContext?.language;
 
     const [apiData, setApiData] = useState([]);
     // apiData recebe os projetos para que eu possa manipulalos no código;
@@ -30,8 +40,8 @@ function ProjectList() {
     return (
         <div className="container">
             <div className="section-projects flex-container jc-center">
-                <h2 className='font-other-titles align-center'>Follow Our Projects</h2>
-                <p className='font-text align-center'>It is a long established fact that a reader will be distracted by the of readable <br /> content of page  lookings at its layouts  points.</p>
+                <h2 className='font-other-titles align-center'>{callBackDefaultContent(contentApplication,language,'projects','title')}</h2>
+                <p className='font-text align-center'>{callBackDefaultContent(contentApplication,language,'projects','subtitle')}</p>
                 <div className="project-grid flex-container jc-center flex-align-center flex-wrap">
                     {
                         apiData.map((projects) => {

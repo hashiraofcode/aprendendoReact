@@ -1,10 +1,25 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import logo from '../../assets/logo-dnc.svg'
 import '../Header/Header.css'
 import ButtonMenu from '../buttonsAplication/button'
+
+//CONTEXTO
+import { AppContext } from '../../context/textsContext'
+
+// UTILITS
+import { callBackDefaultContent } from '../../utilits/callBackDefaultContent'
+
 function Header() {
+const contextData = useContext(AppContext);
+const contentApplication = contextData?.contentApplication;
+const language = contextData?.language;
+    
+
+
     const [isOpen,setOpen] = useState(false);
+
+
     return (
         <>
         <div className="container">
@@ -24,16 +39,16 @@ function Header() {
                     </div>
                     <ul className='flex-container flex-grow jc-end'>
                         <li>
-                            <Link to='/'>Home</Link>
+                            <Link to='/'>{callBackDefaultContent(contentApplication,language,'menu', 'home')}</Link>
                         </li>
                         <li>
-                            <Link to='/about'>About us</Link>
+                            <Link to='/about'>{callBackDefaultContent(contentApplication,language,'menu', 'about')}</Link>
                         </li>
                         <li>
-                            <Link to='/projects'>Projects</Link>
+                            <Link to='/projects'>{callBackDefaultContent(contentApplication,language,'menu', 'projects')}</Link>
                         </li>
                         <li>
-                            <Link to='/contact'>Contacts</Link>
+                            <Link to='/contact'>{callBackDefaultContent(contentApplication,language,'menu', 'contact')}</Link>
                         </li>
                     </ul>
                 </nav>

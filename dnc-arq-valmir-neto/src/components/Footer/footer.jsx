@@ -9,7 +9,21 @@ import dncLogo from '../../assets/logo-dnc.svg'
 import brazilianFlag from '../../assets/coutry-Brazilian-flag.svg'
 import UsaFlag from '../../assets/coutry-USA-Flag.svg'
 
+// CONTEXT
+import { useContext } from 'react'
+import { AppContext } from '../../context/textsContext'
+
+
+
+
 function Footer() {
+    const {contentApplication, setLanguage, language} = useContext(AppContext);
+
+// função definir idiomas;
+const setLang = (language) => {
+    setLanguage(language)
+}
+
     return (
         <>
         <div className="container">
@@ -46,7 +60,9 @@ function Footer() {
                     <p>Copyright  &copy; DNC - 2024 </p>
                     <div className="coutry-flag">
                         <img src={brazilianFlag} alt="brazilian" aria-label='Select your language "Portugues Brazilian"' />
-                        <img src={UsaFlag} alt="United States" aria-label='Select your language "Inglish"' />
+                        <img src={UsaFlag} alt="United States" aria-label='Select your language "Inglish"' onClick={() => {
+                            setLang('en');
+                        }} />
                     </div>
                 </div>
 

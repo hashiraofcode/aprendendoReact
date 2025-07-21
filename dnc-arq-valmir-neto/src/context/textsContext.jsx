@@ -1,10 +1,10 @@
 import { createContext, useState, useEffect } from "react";
 
-export const AppContext = createContext();
+export const AppContext = createContext({});
 
 export const AppProvider = ({children}) => {
     const [language, setLanguage] = useState('br');
-    const [contentApplication, setContentApplication] = useState();
+    const [contentApplication, setContentApplication] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
@@ -22,10 +22,12 @@ export const AppProvider = ({children}) => {
                 setLoading(false)
             }
         }
-
+       
         fetchTexts();
     },[])
-
+    useEffect(() => {
+         console.log(contentApplication);
+    }, [contentApplication])
 
     return (
         <AppContext.Provider value={{contentApplication, setLanguage, language, loading}}>

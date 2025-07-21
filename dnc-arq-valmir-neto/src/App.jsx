@@ -7,12 +7,14 @@ import Projects from './pages/projects'
 import Contacts from './pages/contacts'
 
 //utilits
-import ScrollToTop from '../utilits/scrollToTop'
+import ScrollToTop from './utilits/scrollToTop'
 
-
-
+// CONTEXT
+import { AppContext } from './context/textsContext'
+import { useContext } from 'react'
 function App() {
-
+const { loading } = useContext(AppContext);
+  
   return (
     <>
       <Router>

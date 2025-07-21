@@ -9,6 +9,9 @@
 .heroContent {
     gap: 2rem
 }
+.heroContent.flex-container.flex-direction a {
+    max-width: 240px;
+}
 .heroContent p {
     font-family: "Jost", sans-serif;
     line-height: 1.5;

@@ -5,7 +5,8 @@ export const AppContext = createContext({});
 export const AppProvider = ({children}) => {
     const [language, setLanguage] = useState('br');
     const [contentApplication, setContentApplication] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [loadingThisContent, setLoadingThisContent] = useState(true);
+    const [loadingThisProjects, setLoadingThisProjects] = useState(true);
 
     useEffect(()=>{
         const fetchTexts = async () => {
@@ -19,7 +20,7 @@ export const AppProvider = ({children}) => {
             } catch (e) {
                 console.error(e);
             } finally {
-                setLoading(false)
+                setLoadingThisContent(false);
             }
         }
        
@@ -27,7 +28,7 @@ export const AppProvider = ({children}) => {
     },[])
 
     return (
-        <AppContext.Provider value={{contentApplication, setLanguage, language, loading}}>
+        <AppContext.Provider value={{contentApplication, setLanguage, language, loadingThisContent, setLoadingThisProjects, loadingThisProjects}}>
             {children}
         </AppContext.Provider>
     )

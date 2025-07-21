@@ -8,7 +8,9 @@
     row-gap: 2rem;
 }
 
-
+h3.title-about-content.font-other-titles {
+    min-width: 40%;
+}
 
 @media  (min-width: 1024px){
        .container.aboutContent {

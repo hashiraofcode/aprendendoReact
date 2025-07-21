@@ -17,7 +17,10 @@ import { AppContext } from '../../context/textsContext'
 
 
 function Footer() {
-    const {contentApplication, setLanguage, language} = useContext(AppContext);
+    const dataContext = useContext(AppContext);
+    const contentApplication = dataContext?.contentApplication;
+    const language = dataContext?.language;
+    const setLanguage = dataContext?.setLanguage;
 
 // função definir idiomas;
 const setLang = (language) => {
@@ -31,22 +34,22 @@ const setLang = (language) => {
                 <div className="content-footer flex-container flex-align-center flex-wrap">
                          <div className='logo-socialMedia-container flex-container flex-direction flex-children max-width-30rem '>
                     <img src={dncLogo} alt="Logo Dnc" />
-                    <p>A escola que prepara você para as profissões em alta no mercado de trabalho.</p>
+                    <p>{contentApplication[language]?.general.footerLogoText}</p>
                     <div className="social-media flex-container">
                         <img src={facebookLogo} alt="logo do facebook" aria-label='button social media' /><img src={twiterLogo} alt="logo do twiter" aria-label='button social media' /><img src={linkeldnLogo} alt="logo do linkeldn" aria-label='button social media' /><img src={instagramLogo} alt="logo do instagram" aria-label='button social media' />
                     </div>
                 </div>
                 <div className='links-container flex-children flex-container flex-direction jc-center flex-wrap'>
-                    <h5 className='align-center trasform-text small-titles'>pages</h5>
+                    <h5 className='align-center trasform-text small-titles'>{contentApplication[language]?.general.pages}</h5>
                     <ul className='links-list flex-container flex-direction jc-center'>
-                        <li><Link to='/'>home</Link></li>
-                        <li><Link to='/about'>about <span>us</span></Link></li>
-                        <li><Link to='/projects'>Projects</Link></li>
-                        <li><Link to='/contact'>Contact</Link></li>
+                        <li><Link to='/'>{contentApplication[language]?.menu.home}</Link></li>
+                        <li><Link to='/about'>{contentApplication[language]?.menu.about}</Link></li>
+                        <li><Link to='/projects'>{contentApplication[language]?.menu.projects}</Link></li>
+                        <li><Link to='/contact'>{contentApplication[language]?.menu.contact}</Link></li>
                     </ul>
                 </div>
                 <div className="adress-container flex-children max-width-20rem flex-container flex-direction jc-center">
-                    <h5 className=' trasform-text small-titles'>contact</h5>
+                    <h5 className=' trasform-text small-titles'>{contentApplication[language]?.general.contact}</h5>
                     <address className='flex-container flex-direction jc-center'>
                         <p>
                             R. Justino Cobra, 61 – Vila Ema | São José dos Campos – SP | CEP 12243-030
@@ -59,10 +62,22 @@ const setLang = (language) => {
                 <div className="footer-languages-credits flex-container jc-space-between flex-wrap">
                     <p>Copyright  &copy; DNC - 2024 </p>
                     <div className="coutry-flag">
-                        <img src={brazilianFlag} alt="brazilian" aria-label='Select your language "Portugues Brazilian"' />
-                        <img src={UsaFlag} alt="United States" aria-label='Select your language "Inglish"' onClick={() => {
+                        <img 
+                        src={brazilianFlag} 
+                        alt="brazilian" 
+                        aria-label='Select your language "Portugues Brazilian"' 
+                        onClick={() => {
+                            setLang('br');
+                        }}
+                        />
+                        <img 
+                        src={UsaFlag} 
+                        alt="United States" 
+                        aria-label='Select your language "Inglish"' 
+                        onClick={() => {
                             setLang('en');
-                        }} />
+                        }} 
+                        />
                     </div>
                 </div>
 

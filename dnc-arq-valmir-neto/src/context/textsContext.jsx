@@ -25,9 +25,6 @@ export const AppProvider = ({children}) => {
        
         fetchTexts();
     },[])
-    useEffect(() => {
-         console.log(contentApplication);
-    }, [contentApplication])
 
     return (
         <AppContext.Provider value={{contentApplication, setLanguage, language, loading}}>

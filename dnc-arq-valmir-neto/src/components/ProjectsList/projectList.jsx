@@ -20,6 +20,8 @@ function ProjectList() {
     const language = dataContext?.language;
 
     const [apiData, setApiData] = useState([]);
+    const [favProjects, setFavProjects] = useState([]);
+
     // apiData recebe os projetos para que eu possa manipulalos no código;
 
     useEffect(() => {
@@ -38,7 +40,27 @@ function ProjectList() {
         dataProjects();
     }, [])
 
+    // função que define o projeto como gostei;
+    const handleFavProject = (id) => {
+        setFavProjects((prevFavProjects = favProjects)=> {
+            if (prevFavProjects.includes(id)) {
+                const aLikedProjects = prevFavProjects.filter((projectId) => projectId !== id );
+                const dataFormat = JSON.stringify(aLikedProjects)
+                sessionStorage.setItem('favProjects', dataFormat);
+                return  aLikedProjects;
+            } else {
+                sessionStorage.setItem('favProjects', JSON.stringify([...favProjects, id]));
+                return [...prevFavProjects, id];
+            }
+        })
+    }
 
+    useState(() => {
+        const sessionData = JSON.parse(sessionStorage.getItem('favProjects'))
+        if (sessionData) {
+            setFavProjects(sessionData);
+        }
+    })
     return (
         <div className="container">
             <div className="section-projects flex-container jc-center">
@@ -52,8 +74,16 @@ function ProjectList() {
                                     <div className="exemple-poster" style={{ 'backgroundImage': `url(${projects.thumb})` }}></div>
                                     <h3 className='small-titles'>{projects.title}</h3>
                                     <p className='font-text'>{projects.subtitle}</p>
-                                    <button aria-label='liked button'>
-                                        <img src={like} alt='like button' />
+                                    <button
+                                     aria-label='liked button'
+                                     onClick={() => handleFavProject(projects?.id)}
+                                     >
+                                        <img src={favProjects.includes(projects?.id) ? 
+                                            likeFill :
+                                            like
+                                        } 
+                                        alt='like button' 
+                                        />
                                     </button>
                                 </div>
                             )

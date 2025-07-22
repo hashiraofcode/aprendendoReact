@@ -12,11 +12,23 @@ import ScrollToTop from './utilits/scrollToTop'
 // CONTEXT
 import { AppContext } from './context/textsContext'
 import { useContext } from 'react'
+// LOADING 
+import Loading from './components/loadingSpinner/loadingSpinner'
+
+
+
 function App() {
-const { loading } = useContext(AppContext);
-  
+const dataContext = useContext(AppContext);
+const loadingThisContent = dataContext?.loadingThisContent;
+
+
+// carregamento
+if (loadingThisContent) {
+  return <Loading/>
+}
+
   return (
-    <>
+      <>
       <Router>
         <ScrollToTop/>
         <Routes>

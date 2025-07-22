@@ -2,13 +2,12 @@ import { createContext, useState, useEffect } from "react";
 
 export const AppContext = createContext({});
 
-export const AppProvider = ({children}) => {
+export const AppProvider = ({ children }) => {
     const [language, setLanguage] = useState('br');
     const [contentApplication, setContentApplication] = useState(null);
     const [loadingThisContent, setLoadingThisContent] = useState(true);
-    const [loadingThisProjects, setLoadingThisProjects] = useState(true);
 
-    useEffect(()=>{
+    useEffect(() => {
         const fetchTexts = async () => {
             try {
                 const response = await fetch('/api/webText');
@@ -23,12 +22,13 @@ export const AppProvider = ({children}) => {
                 setLoadingThisContent(false);
             }
         }
-       
+
         fetchTexts();
-    },[])
+    }, [])
+
 
     return (
-        <AppContext.Provider value={{contentApplication, setLanguage, language, loadingThisContent, setLoadingThisProjects, loadingThisProjects}}>
+        <AppContext.Provider value={{ contentApplication, setLanguage, language, loadingThisContent,}}>
             {children}
         </AppContext.Provider>
     )

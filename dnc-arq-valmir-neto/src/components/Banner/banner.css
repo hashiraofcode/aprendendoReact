@@ -1,0 +1,17 @@
+.banner {
+    width: 100%;
+    height: 356px;
+    background-position: center;
+    background-size: cover;
+    background: #000;
+}
+
+.title-banner {
+    width: 50%;
+    max-width: 50.3rem;
+    min-width: 20.5rem;
+    min-height: 14rem;
+    border-radius: 3rem 3rem 0 0;
+    border: none;
+    background-color: white;
+}

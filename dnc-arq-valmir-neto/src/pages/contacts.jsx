@@ -1,4 +1,4 @@
-import Banner from '../components/Banner/banner.jsx'
+import BannerComponet from '../components/Banner/banner.jsx'
 import Header from '../components/Header/Header.jsx'
 import ContactForm from '../components/ContactForm/contactform.jsx'
 import Footer from '../components/Footer/footer.jsx'
@@ -8,7 +8,7 @@ function Contacts() {
     return (
         <>
             <Header />
-            <Banner image={ImageBanner} title='Contact' />
+            <BannerComponet image={ImageBanner} title='Contact' />
             <ContactForm />
             <Footer />
         </>

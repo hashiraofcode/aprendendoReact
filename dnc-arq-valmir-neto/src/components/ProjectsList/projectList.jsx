@@ -28,7 +28,7 @@ function ProjectList() {
 
         const dataProjects = async () => {
             try {
-                const data = await apiService(`/api/projects`);
+                const data = await apiService(`https://react.dnc.group/files/projects`);
                 setApiData(data);
             } catch (err) {
                 setApiData([])

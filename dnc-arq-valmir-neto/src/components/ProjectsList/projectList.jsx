@@ -28,8 +28,8 @@ function ProjectList() {
 
         const dataProjects = async () => {
             try {
-                const {projetos, textos} = await apiService(`./././netlify/functions/fetch.js`);
-                setApiData(data?.textos);
+                const {projetos} = await apiService(`/.netlify/functions/fetch`);
+                setApiData(projetos);
             } catch (err) {
                 setApiData([])
                 console.log(err)

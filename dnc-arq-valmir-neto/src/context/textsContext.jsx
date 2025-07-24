@@ -12,12 +12,12 @@ export const AppProvider = ({ children }) => {
     useEffect(() => {
         const fetchTexts = async () => {
             try {
-                const response = await fetch('./././netlify/functions/fetch.js');
-                const data = await response.json();
-                if (!response.ok) {
-                    throw new Error(`Erro: ${response.status} = ${response.text}`);
-                }
-                setContentApplication(data?.textos);
+                const response = await fetch('/.netlify/functions/fetch');
+                if (response.ok) {
+                     const {textos} = await response.json();
+                     setContentApplication(textos);
+                } else throw new Error(`Erro: ${response.status} = ${response.text}`);
+                console.log(response)
             } catch (e) {
                 console.error(e);
             } finally {

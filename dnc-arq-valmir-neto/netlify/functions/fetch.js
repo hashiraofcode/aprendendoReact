@@ -4,18 +4,22 @@ export const handler = async () => {
             fetch('https://react.dnc.group/files/webText'),
             fetch('https://react.dnc.group/files/projects'),
         ])
-        const [resp1, resp2] = await Promise.all([
+        if ( data1.ok && data2.ok) {
+            const [resp1, resp2] = await Promise.all([
             data1.json(), 
             data2.json()
         ]);
 
-        return {
+         return {
             statusCode: 200,
             body: JSON.stringify({
                 projetos: resp2,
                 textos: resp1
             })
         };
+        } else {
+            throw new Error('teve um erro no fetch')
+        }
     } catch (err) {
         return {
             statusCode: 500,

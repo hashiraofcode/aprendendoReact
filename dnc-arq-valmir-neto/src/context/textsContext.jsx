@@ -24,12 +24,17 @@ export const AppProvider = ({ children }) => {
                 setLoadingThisContent(false);
             }
         }
+        const getLanguage = () => {
+           const lang = localStorage.getItem('lang');
+           setLanguage(lang)
+        }
         
         fetchTexts();
     }, [])
 
     useEffect(()=> { 
         localStorage.setItem('lang', language);
+        console.log('essa função está ok')
     },[language])
 
     return (

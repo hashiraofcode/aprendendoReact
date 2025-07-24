@@ -12,12 +12,12 @@ export const AppProvider = ({ children }) => {
     useEffect(() => {
         const fetchTexts = async () => {
             try {
-                const response = await fetch('https://react.dnc.group/files/webText');
+                const response = await fetch('./././netlify/functions/fetch.js');
                 const data = await response.json();
                 if (!response.ok) {
                     throw new Error(`Erro: ${response.status} = ${response.text}`);
                 }
-                setContentApplication(data);
+                setContentApplication(data?.textos);
             } catch (e) {
                 console.error(e);
             } finally {

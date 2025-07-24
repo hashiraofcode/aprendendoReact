@@ -28,8 +28,8 @@ function ProjectList() {
 
         const dataProjects = async () => {
             try {
-                const data = await apiService(`https://react.dnc.group/files/projects`);
-                setApiData(data);
+                const {projetos, textos} = await apiService(`./././netlify/functions/fetch.js`);
+                setApiData(data?.textos);
             } catch (err) {
                 setApiData([])
                 console.log(err)
